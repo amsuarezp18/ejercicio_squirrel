@@ -65,15 +65,15 @@ function genera_tabla() {
             var matrix = [0,0,0,0]
             data.forEach(row =>{
               var index = 0; 
-              var found = row.events.some(event => event === evento);
-              if (found && row.squirrel){
+              var value = row.events.some(event => event === evento);
+              if (value && row.squirrel){
                 index = 3;
               }
-              else if (found && !row.squirrel)
+              else if (value && !row.squirrel)
               {
                 index=1;
               }
-              else if(row.squirrel && !found)
+              else if(row.squirrel && !value)
               {
                 index=2;
               }
